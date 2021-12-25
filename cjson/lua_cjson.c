@@ -75,6 +75,10 @@
 #define DEFAULT_DECODE_INVALID_NUMBERS 0
 #endif
 
+#if LUA_VERSION_NUM==501
+void luaL_setfuncs (lua_State *L, const luaL_Reg *l, int nup);
+#endif
+
 typedef enum {
     T_OBJ_BEGIN,
     T_OBJ_END,
