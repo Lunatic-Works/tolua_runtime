@@ -15,9 +15,8 @@ LOCAL_CPPFLAGS := -O2
 LOCAL_CFLAGS := -O2 -std=gnu99
 LOCAL_SRC_FILES := \
  ../../src/int64.c \
- ../../src/struct.c \
  ../../src/tolua.c \
- ../../src/uint64.c \
+ ../../src/uint64.c
 
 LOCAL_WHOLE_STATIC_LIBRARIES += libluajit
 include $(BUILD_SHARED_LIBRARY)

@@ -7,7 +7,3 @@
 * Android armeabi: `build_android_armeabi.sh` (MSYS2, need to configure mingw32 toolchain), `link_android_armeabi.bat` (cmd)
 * macOS: `build_macos.sh`
 * iOS: `build_ios.sh`
-
-## Libs
-
-* struct http://www.inf.puc-rio.br/~roberto/struct/

@@ -10,7 +10,6 @@ cd ..
 mkdir -p Plugins/Windows
 gcc -m64 -O3 -Wall -Wextra -std=gnu99 -shared \
  src/int64.c \
- src/struct.c \
  src/tolua.c \
  src/uint64.c \
  -fPIC \
