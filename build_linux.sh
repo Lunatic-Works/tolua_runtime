@@ -3,7 +3,7 @@
 # build for Ubuntu 24.04
 
 cd luajit-2.1 || exit
-# make clean
+make clean
 make -j8 BUILDMODE=static CC="gcc -fPIC -m64 -O3" XCFLAGS=-DLUAJIT_ENABLE_GC64
 echo -e "\n[MAINTENANCE] build libluajit.a done\n"
 cd ..
