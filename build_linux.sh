@@ -14,28 +14,9 @@ gcc -m64 -O3 -Wall -Wextra -std=gnu99 -shared \
  src/struct.c \
  src/tolua.c \
  src/uint64.c \
- `# cjson/fpconv.c` \
- `# cjson/lua_cjson.c` \
- `# cjson/strbuf.c` \
- `# lpeg/lpeg.c` \
- `# luasocket/auxiliar.c` \
- `# luasocket/buffer.c` \
- `# luasocket/except.c` \
- `# luasocket/inet.c` \
- `# luasocket/io.c` \
- `# luasocket/luasocket.c` \
- `# luasocket/mime.c` \
- `# luasocket/options.c` \
- `# luasocket/select.c` \
- `# luasocket/tcp.c` \
- `# luasocket/timeout.c` \
- `# luasocket/udp.c` \
- `# luasocket/usocket.c` \
- `# protobuf/pb.c` \
  -fPIC \
  -Isrc \
  -Iluajit-2.1/src \
- `# -Iluasocket` \
  -Wl,--whole-archive luajit-2.1/src/libluajit.a \
  -Wl,--no-whole-archive \
  -static-libgcc -static-libstdc++ \
