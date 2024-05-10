@@ -7,7 +7,7 @@ NDKCROSS="$NDKBIN/aarch64-linux-android-"
 NDKCC="$NDKBIN/aarch64-linux-android$NDKABI-clang"
 
 cd luajit-2.1/src || exit
-# make clean
+make clean
 make -j8 \
  HOST_CC="gcc -m64" \
  CROSS="$NDKCROSS" \
@@ -27,7 +27,7 @@ if [[ "$OSTYPE" == "msys" ]]; then
     # cmd /c "link_android_arm64.bat"
 else
     cd android || exit
-    # "$NDKDIR/ndk-build" clean APP_ABI=armeabi-v7a,x86,arm64-v8a APP_PLATFORM="android-$NDKABI"
+    "$NDKDIR/ndk-build" clean APP_ABI=armeabi-v7a,x86,arm64-v8a APP_PLATFORM="android-$NDKABI"
     "$NDKDIR/ndk-build" APP_ABI=arm64-v8a APP_PLATFORM="android-$NDKABI"
     cp libs/arm64-v8a/libtolua.so ../Plugins/Android/libs/arm64-v8a/
 fi

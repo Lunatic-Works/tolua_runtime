@@ -1,20 +1,33 @@
-cd luajit-2.1/src
+#!/bin/bash
 
-# Android/ARM, armeabi-v7a (ARMv7 VFP), Android 4.0+ (ICS)
-NDK=D:/android-ndk-r10e
-NDKABI=19
-NDKVER=$NDK/toolchains/arm-linux-androideabi-4.9
-NDKP=$NDKVER/prebuilt/windows-x86_64/bin/arm-linux-androideabi-
-NDKF="--sysroot $NDK/platforms/android-$NDKABI/arch-arm" 
-NDKARCH="-march=armv7-a -mfloat-abi=softfp -Wl,--fix-cortex-a8"
+NDKDIR=/c/android-ndk-r19
+NDKABI=21
+NDKBIN="$NDKDIR/toolchains/llvm/prebuilt/windows-x86_64/bin"
+NDKCROSS="$NDKBIN/arm-linux-androideabi-"
+NDKCC="$NDKBIN/armv7a-linux-androideabi$NDKABI-clang"
 
+cd luajit-2.1/src || exit
 make clean
-make HOST_CC="gcc -m32" CROSS=$NDKP TARGET_SYS=Linux TARGET_FLAGS="$NDKF $NDKARCH"
-cp ./libluajit.a ../../android/jni/libluajit.a
-make clean
+make -j8 \
+ HOST_CC="gcc -m32" \
+ CROSS="$NDKCROSS" \
+ STATIC_CC="$NDKCC" \
+ DYNAMIC_CC="$NDKCC -fPIC" \
+ TARGET_SYS=Linux \
+ TARGET_LD="$NDKCC" \
+ TARGET_AR="$NDKBIN/llvm-ar rcus" \
+ TARGET_STRIP="$NDKBIN/llvm-strip"
+cp libluajit.a ../../android/jni/
+cd ../..
 
-cd ../../android
-$NDK/ndk-build clean APP_ABI="armeabi-v7a,x86,arm64-v8a"
-$NDK/ndk-build APP_ABI="armeabi-v7a"
-cp libs/armeabi-v7a/libtolua.so ../Plugins/Android/libs/armeabi-v7a
-$NDK/ndk-build clean APP_ABI="armeabi-v7a,x86,arm64-v8a"
+mkdir -p Plugins/Android/libs/armeabi-v7a
+if [[ "$OSTYPE" == "msys" ]]; then
+    cd ../../
+    # can't pass $NDKDIR to bat
+    # cmd /c "link_android_armeabi.bat"
+else
+    cd android || exit
+    "$NDKDIR/ndk-build" clean APP_ABI=armeabi-v7a,x86,arm64-v8a APP_PLATFORM="android-$NDKABI"
+    "$NDKDIR/ndk-build" APP_ABI=armeabi-v7a APP_PLATFORM="android-$NDKABI"
+    cp libs/armeabi-v7a/libtolua.so ../Plugins/Android/libs/armeabi-v7a/
+fi
