@@ -20,7 +20,7 @@ make -j8 \
 cp libluajit.a ../../android/jni/
 cd ../..
 
-mkdir -p Plugins/Android/libs/armeabi-v7a
+mkdir -p Plugins/Android/armeabi-v7a
 if [[ "$OSTYPE" == "msys" ]]; then
     cd ../../
     # can't pass $NDKDIR to bat
@@ -29,5 +29,5 @@ else
     cd android || exit
     "$NDKDIR/ndk-build" clean APP_ABI=armeabi-v7a,x86,arm64-v8a APP_PLATFORM="android-$NDKABI"
     "$NDKDIR/ndk-build" APP_ABI=armeabi-v7a APP_PLATFORM="android-$NDKABI"
-    cp libs/armeabi-v7a/libtolua.so ../Plugins/Android/libs/armeabi-v7a/
+    cp libs/armeabi-v7a/libtolua.so ../Plugins/Android/armeabi-v7a/
 fi
