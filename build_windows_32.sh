@@ -7,7 +7,7 @@ echo -e "\n[MAINTENANCE] build libluajit.a done\n"
 cd ..
 
 mkdir -p Plugins/Windows/32
-gcc -m32 -O3 -Wall -Wextra -std=gnu99 -shared \
+gcc -m32 -O3 -Wall -Wextra -Wpedantic -Wstrict-prototypes -std=gnu99 -shared \
  src/int64.c \
  src/tolua.c \
  src/uint64.c \

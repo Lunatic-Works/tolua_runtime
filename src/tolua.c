@@ -50,7 +50,7 @@ static int settag = 0;
 static int vptr = 1;
 
 /*---------------------------tolua extend functions--------------------------------*/
-LUALIB_API void* tolua_tag()
+LUALIB_API void* tolua_tag(void)
 {
     return &tag;
 }
@@ -1115,7 +1115,7 @@ typedef struct stringbuffer
 
 static stringbuffer sb;
 
-void initmodulebuffer()
+void initmodulebuffer(void)
 {
     sb.len = 0;
     sb.buffer = NULL;
@@ -2004,7 +2004,7 @@ static int class_equals_event (lua_State *L)
 
 
 #ifdef _WIN32
-double tolua_timegettime()
+double tolua_timegettime(void)
 {
     FILETIME ft;
     double t;
@@ -2015,7 +2015,7 @@ double tolua_timegettime()
     return (t - 11644473600.0);
 }
 #else
-double tolua_timegettime()
+double tolua_timegettime(void)
 {
     struct timeval v;
     gettimeofday(&v, (struct timezone *) NULL);
@@ -2066,7 +2066,7 @@ static int tolua_bnd_setpeer(lua_State *L)
     }
 
     return 0;
-};
+}
 
 static int tolua_bnd_getpeer(lua_State *L)
 {
@@ -2079,7 +2079,7 @@ static int tolua_bnd_getpeer(lua_State *L)
     };
 
     return 1;
-};
+}
 
 static int tolua_bnd_getfunction(lua_State *L)
 {
