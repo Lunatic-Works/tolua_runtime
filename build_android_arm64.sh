@@ -9,14 +9,15 @@ NDKCC="$NDKBIN/aarch64-linux-android$NDKABI-clang"
 cd luajit-2.1/src || exit
 make clean
 make -j8 \
- HOST_CC="gcc -m64" \
+ HOST_CC="gcc -m64 -std=gnu99" \
  CROSS="$NDKCROSS" \
  STATIC_CC="$NDKCC" \
  DYNAMIC_CC="$NDKCC -fPIC" \
  TARGET_SYS=Linux \
  TARGET_LD="$NDKCC" \
  TARGET_AR="$NDKBIN/llvm-ar rcus" \
- TARGET_STRIP="$NDKBIN/llvm-strip"
+ TARGET_STRIP="$NDKBIN/llvm-strip" \
+ || exit
 cp libluajit.a ../../android/jni/
 cd ../..
 
