@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0F4B04CF1800959F002EA938"
                BuildableName = "tolua.bundle"
-               BlueprintName = "tolua"
+               BlueprintName = "tolua-old"
                ReferencedContainer = "container:tolua.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -52,7 +52,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0F4B04CF1800959F002EA938"
             BuildableName = "tolua.bundle"
-            BlueprintName = "tolua"
+            BlueprintName = "tolua-old"
             ReferencedContainer = "container:tolua.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
