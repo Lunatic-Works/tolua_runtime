@@ -9,20 +9,20 @@ DESTDIR=$DIR/ios
 PLUGINDIR=$DIR/Plugins/iOS
 IXCODE=$(xcode-select -print-path)
 ISDK=$IXCODE/Platforms/iPhoneOS.platform/Developer
-ISDKD=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain
+ISDKD=$IXCODE/Toolchains/XcodeDefault.xctoolchain
 ISDKVER=iPhoneOS.sdk
 ISDKP=$IXCODE/usr/bin
 
 if [ ! -e "$ISDKP"/ar ]; then
-    sudo cp $ISDKD/usr/bin/ar "$ISDKP"
+    sudo cp "$ISDKD"/usr/bin/ar "$ISDKP"
 fi
 
 if [ ! -e "$ISDKP"/ranlib ]; then
-    sudo cp $ISDKD/usr/bin/ranlib "$ISDKP"
+    sudo cp "$ISDKD"/usr/bin/ranlib "$ISDKP"
 fi
 
 if [ ! -e "$ISDKP"/strip ]; then
-    sudo cp $ISDKD/usr/bin/strip "$ISDKP"
+    sudo cp "$ISDKD"/usr/bin/strip "$ISDKP"
 fi
 
 rm "$DESTDIR"/*.a
