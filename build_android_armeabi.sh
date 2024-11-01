@@ -23,9 +23,7 @@ cd ../..
 
 mkdir -p Plugins/Android/armeabi-v7a
 if [[ "$OSTYPE" == "msys" ]]; then
-    cd ../../
-    # can't pass $NDKDIR to bat
-    # cmd /c "link_android_armeabi.bat"
+    cmd /c link_android_armeabi.bat
 else
     cd android || exit
     "$NDKDIR/ndk-build" clean APP_ABI=armeabi-v7a,x86,arm64-v8a APP_PLATFORM="android-$NDKABI"
