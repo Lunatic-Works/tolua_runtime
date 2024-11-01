@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 LIPO="xcrun -sdk iphoneos lipo"
@@ -50,4 +50,4 @@ xcodebuild clean
 xcodebuild -configuration=Release
 
 mkdir -p "$PLUGINDIR"
-cp ./build/Release-iphoneos/libtolua.a "$PLUGINDIR"
+cp build/Release-iphoneos/libtolua.a "$PLUGINDIR"

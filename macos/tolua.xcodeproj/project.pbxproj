@@ -79,7 +79,7 @@
 			dependencies = (
 			);
 			name = tolua;
-			productName = ulua;
+			productName = tolua;
 			productReference = 762E63BF2BEFDFF8004692DA /* tolua.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
@@ -91,7 +91,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1600;
-				ORGANIZATIONNAME = "";
+				ORGANIZATIONNAME = topameng;
 			};
 			buildConfigurationList = 0F4B04CB1800959F002EA938 /* Build configuration list for PBXProject "tolua" */;
 			compatibilityVersion = "Xcode 12.0";
