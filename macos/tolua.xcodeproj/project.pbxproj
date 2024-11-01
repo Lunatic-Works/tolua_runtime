@@ -16,10 +16,10 @@
 /* Begin PBXFileReference section */
 		762E63BF2BEFDFF8004692DA /* tolua.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tolua.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A0A3C02BEFDCEC005E96D8 /* libluajit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libluajit.a; path = lib/libluajit.a; sourceTree = "<group>"; };
-		76FAD9C52BEFD0950012A711 /* uint64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = uint64.c; path = ../../src/uint64.c; sourceTree = "<group>"; };
-		76FAD9C62BEFD0950012A711 /* tolua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tolua.h; path = ../../src/tolua.h; sourceTree = "<group>"; };
-		76FAD9C72BEFD0950012A711 /* tolua.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tolua.c; path = ../../src/tolua.c; sourceTree = "<group>"; };
-		76FAD9C82BEFD0950012A711 /* int64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = int64.c; path = ../../src/int64.c; sourceTree = "<group>"; };
+		76FAD9C52BEFD0950012A711 /* uint64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uint64.c; sourceTree = "<group>"; };
+		76FAD9C62BEFD0950012A711 /* tolua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tolua.h; sourceTree = "<group>"; };
+		76FAD9C72BEFD0950012A711 /* tolua.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tolua.c; sourceTree = "<group>"; };
+		76FAD9C82BEFD0950012A711 /* int64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = int64.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,12 +38,12 @@
 			isa = PBXGroup;
 			children = (
 				76A0A3BB2BEFD723005E96D8 /* Frameworks */,
-				0F4B04D51800959F002EA938 /* tolua */,
+				0F4B04D51800959F002EA938 /* src */,
 				762E63BF2BEFDFF8004692DA /* tolua.bundle */,
 			);
 			sourceTree = "<group>";
 		};
-		0F4B04D51800959F002EA938 /* tolua */ = {
+		0F4B04D51800959F002EA938 /* src */ = {
 			isa = PBXGroup;
 			children = (
 				76FAD9C82BEFD0950012A711 /* int64.c */,
@@ -51,7 +51,8 @@
 				76FAD9C62BEFD0950012A711 /* tolua.h */,
 				76FAD9C52BEFD0950012A711 /* uint64.c */,
 			);
-			path = tolua;
+			name = src;
+			path = ../src;
 			sourceTree = "<group>";
 		};
 		76A0A3BB2BEFD723005E96D8 /* Frameworks */ = {
@@ -89,11 +90,11 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1600;
 				ORGANIZATIONNAME = "";
 			};
 			buildConfigurationList = 0F4B04CB1800959F002EA938 /* Build configuration list for PBXProject "tolua" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -161,6 +162,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -210,6 +212,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -228,6 +231,7 @@
 		0F4B04DF1800959F002EA938 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -236,6 +240,7 @@
 					"$(PROJECT_DIR)/../luajit-2.1/src",
 				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = topameng.tolua;
 				PRODUCT_NAME = tolua;
@@ -246,6 +251,7 @@
 		0F4B04E01800959F002EA938 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -254,6 +260,7 @@
 					"$(PROJECT_DIR)/../luajit-2.1/src",
 				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = topameng.tolua;
 				PRODUCT_NAME = tolua;
