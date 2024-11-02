@@ -35,6 +35,8 @@
 # macOS
 .DS_Store
 build/
+project.xcworkspace/
+xcshareddata/
 xcuserdata/
 
 /Plugins
