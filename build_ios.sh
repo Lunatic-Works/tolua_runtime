@@ -27,6 +27,7 @@ fi
 
 rm "$DESTDIR"/lib/*.a
 cd "$SRCDIR" || exit
+mkdir -p "$DESTDIR"/lib
 
 # make clean
 # ISDKF="-arch armv7 -isysroot $ISDK/SDKs/$ISDKVER -miphoneos-version-min=12.0"

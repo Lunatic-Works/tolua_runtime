@@ -10,6 +10,7 @@ PLUGINDIR=$DIR/Plugins/macOS
 
 rm "$DESTDIR"/lib/*.a
 cd "$SRCDIR" || exit
+mkdir -p "$DESTDIR"/lib
 
 make clean
 ISDKF="-arch x86_64"
