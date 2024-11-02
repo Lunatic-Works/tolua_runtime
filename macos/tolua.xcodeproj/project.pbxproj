@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		76F82C4A2CD5968B00821FBF /* libluajit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A0A3C02BEFDCEC005E96D8 /* libluajit.a */; };
-		76F82C4B2CD596F400821FBF /* int64.c in Sources */ = {isa = PBXBuildFile; fileRef = 76FAD9C82BEFD0950012A711 /* int64.c */; };
-		76F82C4C2CD596F800821FBF /* tolua.c in Sources */ = {isa = PBXBuildFile; fileRef = 76FAD9C72BEFD0950012A711 /* tolua.c */; };
-		76F82C4D2CD596FC00821FBF /* uint64.c in Sources */ = {isa = PBXBuildFile; fileRef = 76FAD9C52BEFD0950012A711 /* uint64.c */; };
+		76ED52342CD5A91C00C670BA /* libluajit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A0A3C02BEFDCEC005E96D8 /* libluajit.a */; };
+		76ED52352CD5A96500C670BA /* int64.c in Sources */ = {isa = PBXBuildFile; fileRef = 76FAD9C82BEFD0950012A711 /* int64.c */; };
+		76ED52362CD5A96800C670BA /* tolua.c in Sources */ = {isa = PBXBuildFile; fileRef = 76FAD9C72BEFD0950012A711 /* tolua.c */; };
+		76ED52372CD5A96B00C670BA /* uint64.c in Sources */ = {isa = PBXBuildFile; fileRef = 76FAD9C52BEFD0950012A711 /* uint64.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		76A0A3C02BEFDCEC005E96D8 /* libluajit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libluajit.a; path = lib/libluajit.a; sourceTree = "<group>"; };
-		76F82C462CD5965A00821FBF /* libtolua.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtolua.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		76ED522C2CD5A87800C670BA /* tolua.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tolua.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		76FAD9C52BEFD0950012A711 /* uint64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uint64.c; sourceTree = "<group>"; };
 		76FAD9C62BEFD0950012A711 /* tolua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tolua.h; sourceTree = "<group>"; };
 		76FAD9C72BEFD0950012A711 /* tolua.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tolua.c; sourceTree = "<group>"; };
@@ -23,11 +23,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		76F82C442CD5965A00821FBF /* Frameworks */ = {
+		76ED52292CD5A87800C670BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76F82C4A2CD5968B00821FBF /* libluajit.a in Frameworks */,
+				76ED52342CD5A91C00C670BA /* libluajit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,7 +39,7 @@
 			children = (
 				76A0A3BB2BEFD723005E96D8 /* Frameworks */,
 				0F4B04D51800959F002EA938 /* src */,
-				76F82C462CD5965A00821FBF /* libtolua.a */,
+				76ED522C2CD5A87800C670BA /* tolua.bundle */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,24 +65,14 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		76F82C422CD5965A00821FBF /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		76F82C452CD5965A00821FBF /* tolua */ = {
+		76ED522B2CD5A87800C670BA /* tolua */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 76F82C472CD5965A00821FBF /* Build configuration list for PBXNativeTarget "tolua" */;
+			buildConfigurationList = 76ED522D2CD5A87800C670BA /* Build configuration list for PBXNativeTarget "tolua" */;
 			buildPhases = (
-				76F82C422CD5965A00821FBF /* Headers */,
-				76F82C432CD5965A00821FBF /* Sources */,
-				76F82C442CD5965A00821FBF /* Frameworks */,
+				76ED52282CD5A87800C670BA /* Sources */,
+				76ED52292CD5A87800C670BA /* Frameworks */,
+				76ED522A2CD5A87800C670BA /* Resources */,
 			);
 			buildRules = (
 			);
@@ -92,8 +82,8 @@
 			packageProductDependencies = (
 			);
 			productName = tolua;
-			productReference = 76F82C462CD5965A00821FBF /* libtolua.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 76ED522C2CD5A87800C670BA /* tolua.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -105,7 +95,7 @@
 				LastUpgradeCheck = 1600;
 				ORGANIZATIONNAME = topameng;
 				TargetAttributes = {
-					76F82C452CD5965A00821FBF = {
+					76ED522B2CD5A87800C670BA = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -123,19 +113,29 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				76F82C452CD5965A00821FBF /* tolua */,
+				76ED522B2CD5A87800C670BA /* tolua */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		76ED522A2CD5A87800C670BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		76F82C432CD5965A00821FBF /* Sources */ = {
+		76ED52282CD5A87800C670BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76F82C4B2CD596F400821FBF /* int64.c in Sources */,
-				76F82C4C2CD596F800821FBF /* tolua.c in Sources */,
-				76F82C4D2CD596FC00821FBF /* uint64.c in Sources */,
+				76ED52352CD5A96500C670BA /* int64.c in Sources */,
+				76ED52362CD5A96800C670BA /* tolua.c in Sources */,
+				76ED52372CD5A96B00C670BA /* uint64.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +186,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../luajit-2.1/src";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -230,76 +231,82 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../luajit-2.1/src";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				SDKROOT = macosx;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		76F82C482CD5965A00821FBF /* Debug */ = {
+		76ED522E2CD5A87800C670BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				EXECUTABLE_PREFIX = lib;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				HEADER_SEARCH_PATHS = (
-					"../luajit-2.1/src",
-					../src,
-				);
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 topameng. All rights reserved.";
+				INFOPLIST_KEY_NSPrincipalClass = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = topameng.tolua;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
-		76F82C492CD5965A00821FBF /* Release */ = {
+		76ED522F2CD5A87800C670BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EXECUTABLE_PREFIX = lib;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				HEADER_SEARCH_PATHS = (
-					"../luajit-2.1/src",
-					../src,
-				);
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 topameng. All rights reserved.";
+				INFOPLIST_KEY_NSPrincipalClass = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = topameng.tolua;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -315,11 +322,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		76F82C472CD5965A00821FBF /* Build configuration list for PBXNativeTarget "tolua" */ = {
+		76ED522D2CD5A87800C670BA /* Build configuration list for PBXNativeTarget "tolua" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				76F82C482CD5965A00821FBF /* Debug */,
-				76F82C492CD5965A00821FBF /* Release */,
+				76ED522E2CD5A87800C670BA /* Debug */,
+				76ED522F2CD5A87800C670BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

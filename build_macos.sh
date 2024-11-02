@@ -28,4 +28,4 @@ xcodebuild clean
 xcodebuild -configuration=Release ONLY_ACTIVE_ARCH=NO
 
 mkdir -p "$PLUGINDIR"
-cp build/Release/libtolua.a "$PLUGINDIR"
+cp -r build/Release/tolua.bundle "$PLUGINDIR"
