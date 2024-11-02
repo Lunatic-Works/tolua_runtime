@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		76ED52342CD5A91C00C670BA /* libluajit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A0A3C02BEFDCEC005E96D8 /* libluajit.a */; };
 		76ED52352CD5A96500C670BA /* int64.c in Sources */ = {isa = PBXBuildFile; fileRef = 76FAD9C82BEFD0950012A711 /* int64.c */; };
 		76ED52362CD5A96800C670BA /* tolua.c in Sources */ = {isa = PBXBuildFile; fileRef = 76FAD9C72BEFD0950012A711 /* tolua.c */; };
 		76ED52372CD5A96B00C670BA /* uint64.c in Sources */ = {isa = PBXBuildFile; fileRef = 76FAD9C52BEFD0950012A711 /* uint64.c */; };
+		76ED52342CD5A91C00C670BA /* libluajit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A0A3C02BEFDCEC005E96D8 /* libluajit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		76A0A3C02BEFDCEC005E96D8 /* libluajit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libluajit.a; path = lib/libluajit.a; sourceTree = "<group>"; };
 		76ED522C2CD5A87800C670BA /* tolua.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tolua.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		76FAD9C52BEFD0950012A711 /* uint64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uint64.c; sourceTree = "<group>"; };
 		76FAD9C62BEFD0950012A711 /* tolua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tolua.h; sourceTree = "<group>"; };
 		76FAD9C72BEFD0950012A711 /* tolua.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tolua.c; sourceTree = "<group>"; };
 		76FAD9C82BEFD0950012A711 /* int64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = int64.c; sourceTree = "<group>"; };
+		76A0A3C02BEFDCEC005E96D8 /* libluajit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libluajit.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +34,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76A0A3BB2BEFD723005E96D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76A0A3C02BEFDCEC005E96D8 /* libluajit.a */,
+			);
+			name = Frameworks;
+			path = lib;
+			sourceTree = "<group>";
+		};
 		0F4B04C71800959F002EA938 = {
 			isa = PBXGroup;
 			children = (
@@ -53,14 +62,6 @@
 			);
 			name = src;
 			path = ../src;
-			sourceTree = "<group>";
-		};
-		76A0A3BB2BEFD723005E96D8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				76A0A3C02BEFDCEC005E96D8 /* libluajit.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,7 +187,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "../luajit-2.1/src";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -231,7 +231,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "../luajit-2.1/src";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				SDKROOT = macosx;
 				VALIDATE_PRODUCT = YES;
@@ -244,7 +243,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -253,8 +252,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "../luajit-2.1/src";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 topameng. All rights reserved.";
 				INFOPLIST_KEY_NSPrincipalClass = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
@@ -263,7 +265,6 @@
 					"$(PROJECT_DIR)/lib",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = topameng.tolua;
@@ -280,7 +281,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -289,8 +290,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "../luajit-2.1/src";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 topameng. All rights reserved.";
 				INFOPLIST_KEY_NSPrincipalClass = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
@@ -299,7 +302,6 @@
 					"$(PROJECT_DIR)/lib",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = topameng.tolua;
