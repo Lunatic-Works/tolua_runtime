@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76ED52352CD5A96500C670BA /* int64.c in Sources */ = {isa = PBXBuildFile; fileRef = 76FAD9C82BEFD0950012A711 /* int64.c */; };
+		76ED52362CD5A96800C670BA /* tolua.c in Sources */ = {isa = PBXBuildFile; fileRef = 76FAD9C72BEFD0950012A711 /* tolua.c */; };
 		8400929F1CCF43D600F89A56 /* tolua.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400929E1CCF43D600F89A56 /* tolua.h */; };
 		840092A11CCF43D600F89A56 /* tolua.m in Sources */ = {isa = PBXBuildFile; fileRef = 840092A01CCF43D600F89A56 /* tolua.m */; };
+		76ED52372CD5A96B00C670BA /* uint64.c in Sources */ = {isa = PBXBuildFile; fileRef = 76FAD9C52BEFD0950012A711 /* uint64.c */; };
 		840092A81CCF44F800F89A56 /* libluajit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840092A71CCF44F800F89A56 /* libluajit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8400929B1CCF43D600F89A56 /* libtolua.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtolua.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8400929E1CCF43D600F89A56 /* tolua.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tolua.h; sourceTree = "<group>"; };
-		840092A01CCF43D600F89A56 /* tolua.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tolua.m; sourceTree = "<group>"; };
+		76FAD9C82BEFD0950012A711 /* int64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = int64.c; sourceTree = "<group>"; };
+		76FAD9C72BEFD0950012A711 /* tolua.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tolua.c; sourceTree = "<group>"; };
+		8400929E1CCF43D600F89A56 /* tolua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tolua.h; sourceTree = "<group>"; };
+		840092A01CCF43D600F89A56 /* tolua.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tolua.m; sourceTree = "<group>"; };
+		76FAD9C52BEFD0950012A711 /* uint64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uint64.c; sourceTree = "<group>"; };
 		840092A71CCF44F800F89A56 /* libluajit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libluajit.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -31,6 +37,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		840092921CCF43D600F89A56 = {
+			isa = PBXGroup;
+			children = (
+				76E4A80B2CD5AD8B00D2738A /* Frameworks */,
+				0F4B04D51800959F002EA938 /* src */,
+				8400929D1CCF43D600F89A56 /* tolua */,
+				8400929C1CCF43D600F89A56 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
 		76E4A80B2CD5AD8B00D2738A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -40,21 +56,15 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
-		840092921CCF43D600F89A56 = {
+		0F4B04D51800959F002EA938 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				76E4A80B2CD5AD8B00D2738A /* Frameworks */,
-				8400929D1CCF43D600F89A56 /* tolua */,
-				8400929C1CCF43D600F89A56 /* Products */,
+				76FAD9C82BEFD0950012A711 /* int64.c */,
+				76FAD9C72BEFD0950012A711 /* tolua.c */,
+				76FAD9C52BEFD0950012A711 /* uint64.c */,
 			);
-			sourceTree = "<group>";
-		};
-		8400929C1CCF43D600F89A56 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8400929B1CCF43D600F89A56 /* libtolua.a */,
-			);
-			name = Products;
+			name = src;
+			path = ../src;
 			sourceTree = "<group>";
 		};
 		8400929D1CCF43D600F89A56 /* tolua */ = {
@@ -64,6 +74,14 @@
 				840092A01CCF43D600F89A56 /* tolua.m */,
 			);
 			path = tolua;
+			sourceTree = "<group>";
+		};
+		8400929C1CCF43D600F89A56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8400929B1CCF43D600F89A56 /* libtolua.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76ED52352CD5A96500C670BA /* int64.c in Sources */,
+				76ED52362CD5A96800C670BA /* tolua.c in Sources */,
 				840092A11CCF43D600F89A56 /* tolua.m in Sources */,
+				76ED52372CD5A96B00C670BA /* uint64.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +279,10 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				HEADER_SEARCH_PATHS = "../luajit-2.1/src";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					../luajit-2.1/src,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib",
@@ -289,7 +313,10 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				HEADER_SEARCH_PATHS = "../luajit-2.1/src";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					../luajit-2.1/src,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib",

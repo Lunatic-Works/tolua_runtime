@@ -15,10 +15,10 @@
 
 /* Begin PBXFileReference section */
 		76ED522C2CD5A87800C670BA /* tolua.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tolua.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		76FAD9C52BEFD0950012A711 /* uint64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uint64.c; sourceTree = "<group>"; };
-		76FAD9C62BEFD0950012A711 /* tolua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tolua.h; sourceTree = "<group>"; };
-		76FAD9C72BEFD0950012A711 /* tolua.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tolua.c; sourceTree = "<group>"; };
 		76FAD9C82BEFD0950012A711 /* int64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = int64.c; sourceTree = "<group>"; };
+		76FAD9C72BEFD0950012A711 /* tolua.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tolua.c; sourceTree = "<group>"; };
+		76FAD9C62BEFD0950012A711 /* tolua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tolua.h; sourceTree = "<group>"; };
+		76FAD9C52BEFD0950012A711 /* uint64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uint64.c; sourceTree = "<group>"; };
 		76A0A3C02BEFDCEC005E96D8 /* libluajit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libluajit.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -34,15 +34,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		76A0A3BB2BEFD723005E96D8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				76A0A3C02BEFDCEC005E96D8 /* libluajit.a */,
-			);
-			name = Frameworks;
-			path = lib;
-			sourceTree = "<group>";
-		};
 		0F4B04C71800959F002EA938 = {
 			isa = PBXGroup;
 			children = (
@@ -52,13 +43,13 @@
 			);
 			sourceTree = "<group>";
 		};
-		0F4B04D11800959F002EA938 /* Products */ = {
+		76A0A3BB2BEFD723005E96D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				76ED522C2CD5A87800C670BA /* tolua.bundle */,
+				76A0A3C02BEFDCEC005E96D8 /* libluajit.a */,
 			);
-			name = Products;
-			path = tolua;
+			name = Frameworks;
+			path = lib;
 			sourceTree = "<group>";
 		};
 		0F4B04D51800959F002EA938 /* src */ = {
@@ -71,6 +62,15 @@
 			);
 			name = src;
 			path = ../src;
+			sourceTree = "<group>";
+		};
+		0F4B04D11800959F002EA938 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76ED522C2CD5A87800C670BA /* tolua.bundle */,
+			);
+			name = Products;
+			path = tolua;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
