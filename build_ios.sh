@@ -41,7 +41,7 @@ mkdir -p "$DESTDIR"/lib
 
 make clean
 ISDKF="-arch arm64 -isysroot $ISDK/SDKs/$ISDKVER -miphoneos-version-min=12.0"
-make HOST_CC="gcc" TARGET_FLAGS="$ISDKF" TARGET=arm64 TARGET_SYS=iOS BUILDMODE=static || exit
+make HOST_CC=gcc TARGET_FLAGS="$ISDKF" TARGET=arm64 TARGET_SYS=iOS BUILDMODE=static || exit
 mv "$SRCDIR"/src/libluajit.a "$DESTDIR"/lib/libluajit-arm64.a
 
 cd "$DESTDIR" || exit

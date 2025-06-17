@@ -14,12 +14,12 @@ mkdir -p "$DESTDIR"/lib
 
 make clean
 ISDKF="-arch x86_64"
-make HOST_CC="gcc" TARGET_FLAGS="$ISDKF" TARGET=x86_64 BUILDMODE=static || exit
+make HOST_CC=gcc TARGET_FLAGS="$ISDKF" TARGET=x86_64 BUILDMODE=static || exit
 mv "$SRCDIR"/src/libluajit.a "$DESTDIR"/lib/libluajit-x86_64.a
 
 make clean
 ISDKF="-arch arm64"
-make HOST_CC="gcc" TARGET_FLAGS="$ISDKF" TARGET=arm64 BUILDMODE=static || exit
+make HOST_CC=gcc TARGET_FLAGS="$ISDKF" TARGET=arm64 BUILDMODE=static || exit
 mv "$SRCDIR"/src/libluajit.a "$DESTDIR"/lib/libluajit-arm64.a
 
 cd "$DESTDIR" || exit

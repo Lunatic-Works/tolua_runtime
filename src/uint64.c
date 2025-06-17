@@ -30,6 +30,7 @@ SOFTWARE.
 #include <stdlib.h>
 #include <errno.h>
 #include <ctype.h>
+#include <limits.h>
 
 #include "lua.h"
 #include "lualib.h"
