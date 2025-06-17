@@ -48,8 +48,17 @@
 			children = (
 				76A0A3BB2BEFD723005E96D8 /* Frameworks */,
 				0F4B04D51800959F002EA938 /* src */,
+				0F4B04D11800959F002EA938 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0F4B04D11800959F002EA938 /* Products */ = {
+			isa = PBXGroup;
+			children = (
 				76ED522C2CD5A87800C670BA /* tolua.bundle */,
 			);
+			name = Products;
+			path = tolua;
 			sourceTree = "<group>";
 		};
 		0F4B04D51800959F002EA938 /* src */ = {
@@ -80,8 +89,6 @@
 			dependencies = (
 			);
 			name = tolua;
-			packageProductDependencies = (
-			);
 			productName = tolua;
 			productReference = 76ED522C2CD5A87800C670BA /* tolua.bundle */;
 			productType = "com.apple.product-type.bundle";
@@ -110,7 +117,7 @@
 				Base,
 			);
 			mainGroup = 0F4B04C71800959F002EA938;
-			productRefGroup = 0F4B04C71800959F002EA938;
+			productRefGroup = 0F4B04D11800959F002EA938 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -256,9 +263,10 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "../luajit-2.1/src";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 topameng. All rights reserved.";
-				INFOPLIST_KEY_NSPrincipalClass = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					../luajit-2.1/src,
+				);
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,9 +301,10 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "../luajit-2.1/src";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 topameng. All rights reserved.";
-				INFOPLIST_KEY_NSPrincipalClass = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					../luajit-2.1/src,
+				);
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
