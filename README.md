@@ -1,4 +1,6 @@
-# tolua_runtime
+# ToLua# Runtime
+
+See https://github.com/Lunatic-Works/Nova/tree/master/Assets/Nova/Sources/ThirdParty/ToLua/Plugins for built binaries.
 
 ## Build
 
